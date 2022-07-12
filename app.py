@@ -1,7 +1,8 @@
 from celery import Celery
-from flask import Flask
 
-app = Flask(__name__)
+from project import create_app
+
+app = create_app()
 
 celery = Celery(
     __name__,
